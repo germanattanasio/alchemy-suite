@@ -1,10 +1,10 @@
-# AlchemyAPI Nodejs Starter Application
+# Alchemy Suite
 
-  The AlchemyAPI cloud platform makes it easy to create smart apps that deeply understand the world's conversations, reports and photos so you can align your business with customer preferences and intent.
-
+  The AlchemyAPI cloud platform makes it easy to create smart apps that deeply understand the world's conversations, reports and photos so you can align your business with customer preferences and intent. This Nodejs applications is running in [IBM Bluemix](https://bluemix.net) and shows all the alchemy services and allow you to type an input and see the output.
+  
 Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/Alchemy-API-nodejs)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
 
 ## Getting Started
 
@@ -17,8 +17,6 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
 3. Edit the `manifest.yml` file and change the `<application-name>` to something unique.
   ```none
 applications:
-- services:
-  - alchemy-api
   name: <application-name>
   command: node app.js
   path: .
@@ -32,14 +30,17 @@ applications:
   $ cf login -u <your user ID>
   ```
 
-
 5. Push it live!
 
   ```sh
   $ cf push
   ```
 
-See the full [Getting Started][getting_started] documentation for more details, including code snippets and references.
+5. ADD the alchemy key(create one [here](http://www.alchemyapi.com/api/register.html)) to your environment
+
+  ```sh
+  $ cf se <application-name> ALCHEMY_KEY <alchemy-key>
+  ```
 
 ## Running locally
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/) so you will have to download and install them as part of the steps below.
@@ -47,8 +48,9 @@ See the full [Getting Started][getting_started] documentation for more details, 
 1. Install [Node.js](http://nodejs.org/)
 2. Go to the project folder in a terminal and run:
     `npm install`
-3. Start the application
-4.  `node app.js`
+3. Replace the `<alchemy-api>` placeholder
+4. Start the application
+   `node app.js`
 5. Go to `http://localhost:3000`
 
 ## Troubleshooting
@@ -73,5 +75,4 @@ To troubleshoot your Bluemix app the main useful source of information are the l
 
 
 [cloud_foundry]: https://github.com/cloudfoundry/cli
-[getting_started]: http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/
 [sign_up]: https://apps.admin.ibmcloud.com/manage/trial/bluemix.html?cm_mmc=WatsonDeveloperCloud-_-LandingSiteGetStarted-_-x-_-CreateAnAccountOnBluemixCLI
