@@ -1,3 +1,8 @@
+# DEPRECATED
+
+For ALchemyVision see: visual-recognition-demo.mybluemix.net
+For ALchemyLanguage see: https://alchemy-language-demo.mybluemix.net/
+
 # Alchemy Suite
 
   The AlchemyAPI cloud platform makes it easy to create smart apps that deeply understand the world's conversations, reports and photos so you can align your business with customer preferences and intent. This Nodejs applications is running in [IBM Bluemix](https://bluemix.net) and shows all the alchemy services and allow you to type an input and see the output.
